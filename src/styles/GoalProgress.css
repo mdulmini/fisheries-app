@@ -1,0 +1,33 @@
+.goal-progress {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .goal-progress h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  .goal-progress p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+
+
+

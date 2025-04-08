@@ -1,0 +1,484 @@
+ .buyerSellerMatchPage {
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+}
+
+.backLink:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  width: 250px;
+}
+
+.searchBar input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  background: transparent;
+  width: 100%;
+}
+
+.languageSelect {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.notificationBtn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.notificationIcon {
+  font-size: 1.2rem;
+  color: #0b0b0b;
+}
+
+.notificationCount {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.userProfile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.mainContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mainContent h1 {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.tab.active {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.tab:hover {
+  background-color: #f0f0f0;
+}
+
+.tab.active:hover {
+  background-color: #333;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+}
+
+.leftSection {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rightSection {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.buyersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buyerCard {
+  background-color: #fff;
+  padding:1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.buyerStatus {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.status {
+  padding: 0.3rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.activeStatus {
+  background-color: #e6f4ea;
+  color: #28a745;
+}
+
+.inactiveStatus {
+  background-color: #f8d7da;
+  color: #dc3545;
+}
+
+.buyerCard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.distance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.locationIcon {
+  color: #666;
+  font-size: 1rem;
+}
+
+.buyerDetails {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail {
+  flex: 1;
+  background-color: #f5f7fb;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.detail span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.detail span:first-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.detail span:last-child {
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.acceptBtn,
+.chatBtn {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.acceptBtn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.acceptBtn:hover {
+  background-color: #333;
+}
+
+.chatBtn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.chatBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.filtersSection {
+  background-color: #fff;
+  padding: 3.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  height: 550px;
+  
+}
+
+.filtersHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filtersSection h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.filterGroup {
+  margin-bottom: 1.5rem;
+}
+
+.filterGroup label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.filterGroup select,
+.filterGroup input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.rangeInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rangeInput input[type="range"] {
+  flex: 1;
+}
+
+.rangeInput span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.priceRange {
+  display: flex;
+  gap: 1rem;
+}
+
+.priceRange input {
+  flex: 1;
+}
+
+.applyBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.applyBtn:hover {
+  background-color: #333;
+}
+
+.filterActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.syncDataBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.syncDataBtn:hover {
+  background: #e6f0ff;
+}
+
+.syncDataBtn.syncing {
+  background: #e6f0ff;
+  cursor: not-allowed;
+}
+
+.syncDataBtn .spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.syncMessage {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preferencesBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.preferencesBtn:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .buyerDetails {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

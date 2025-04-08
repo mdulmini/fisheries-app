@@ -1,0 +1,97 @@
+.header {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header.scrolled {
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#hero,#features,#about,#contact {
+  padding-top: 70px; 
+}
+
+.logo {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  color: #333; 
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-selector {
+  padding: 0.5rem; 
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sign-in-btn {
+  padding: 0.5rem 1rem;
+  background-color: #007bff; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #007bff;
+}
+
+/*Animation*/ 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff; 
+}

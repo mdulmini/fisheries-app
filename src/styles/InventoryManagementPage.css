@@ -1,0 +1,1344 @@
+/*.inventory-management-page {
+    position: relative;
+    padding: 2rem;
+    background: #f5f7fb;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .inventory-management-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: #e6e6e6;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+  }
+  
+  .inventory-management-page .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .inventory-management-page .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .inventory-management-page .nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .inventory-management-page .nav-link:hover {
+    color: #000;
+  }
+  
+  .inventory-management-page .nav-link.active {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .header-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .inventory-management-page .language-select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .inventory-management-page .user-profile {
+    position: relative;
+  }
+  
+  .inventory-management-page .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .inventory-management-page .notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  
+  .inventory-management-page .main-content h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .main-content p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .inventory-management-page .card {
+    position: relative;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .inventory-management-page .card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-management-page .card-icon {
+    font-size: 2rem;
+    color: #080808;
+    opacity: 0.8;
+  }
+  
+  .inventory-management-page .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .inventory-management-page .card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .card-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+  }
+  
+  .inventory-management-page .card-value.warning {
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .card-value.success {
+    color: #28a745;
+  }
+  
+  .inventory-management-page .current-inventory {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .inventory-management-page .table-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inventory-management-page .table-header h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  .inventory-management-page .table-header p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .table-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .inventory-management-page .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    width: 200px;
+  }
+  
+  .inventory-management-page .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background: transparent;
+    width: 100%;
+  }
+  
+  .inventory-management-page .table-actions select {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .inventory-management-page .add-new-catch {
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .export-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inventory-management-page th,
+  .inventory-management-page td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .inventory-management-page th {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .product-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .inventory-management-page .product-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+  
+  .inventory-management-page .product-info div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inventory-management-page .product-info p {
+    margin: 0;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .inventory-management-page .product-info span {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .inventory-management-page .optimal {
+    color: #28a745;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .high {
+    color: #ff0000;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .normal {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .status {
+    padding: 0.3rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .status.safe {
+    background-color: #e6f4ea;
+    color: #28a745;
+  }
+  
+  .inventory-management-page .status.at-risk {
+    background-color: #ffe6e6;
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff0000;
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .inventory-management-page .pagination button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .temperature-monitoring {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .inventory-management-page .temperature-monitoring h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  .inventory-management-page .sync-data-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-management-page .sync-icon {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .inventory-management-page .summary-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .inventory-management-page .summary-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .inventory-management-page .table-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .inventory-management-page .pagination {
+      justify-content: center;
+    }
+  
+    .inventory-management-page .sync-data-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }*/
+
+ 
+/*.inventory-management-page {
+    position: relative;
+    background: #f5f7fb;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .inventory-management-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-management-page .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .inventory-management-page .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .inventory-management-page .nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .inventory-management-page .nav-link:hover {
+    color: #000;
+  }
+  
+  .inventory-management-page .nav-link.active {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .inventory-management-page .language-select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .inventory-management-page .sync-data-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+  }
+  
+  .inventory-management-page .sync-data-btn:hover {
+    background: #e6f0ff;
+  }
+  
+  .inventory-management-page .sync-icon {
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .notification-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inventory-management-page .notification-icon {
+    font-size: 1.2rem;
+    color: #0b0b0b;
+  }
+  
+  .inventory-management-page .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .user-profile {
+    position: relative;
+  }
+  
+  .inventory-management-page .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+  }
+  
+  
+  .inventory-management-page .main-content {
+    padding: 2rem;
+  }
+  
+  .inventory-management-page .main-content h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .main-content p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .inventory-management-page .card {
+    position: relative;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .inventory-management-page .card-icon {
+    font-size: 2rem;
+    color: #080808;
+    opacity: 0.8;
+  }
+  
+  .inventory-management-page .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .inventory-management-page .card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .card-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: #0e0d0d;
+  }
+  
+  .inventory-management-page .card-value.warning {
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .card-value.success {
+    color: #0ac141;
+  }
+  
+  .inventory-management-page .current-inventory {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .inventory-management-page .table-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inventory-management-page .table-header h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  .inventory-management-page .table-header p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .table-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .inventory-management-page .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    width: 200px;
+  }
+  
+  .inventory-management-page .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background: transparent;
+    width: 100%;
+  }
+  
+  .inventory-management-page .table-actions select {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .inventory-management-page .add-new-catch {
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .export-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inventory-management-page th,
+  .inventory-management-page td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .inventory-management-page th {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .product-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .inventory-management-page .product-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+  
+  .inventory-management-page .product-info div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inventory-management-page .product-info p {
+    margin: 0;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .inventory-management-page .product-info span {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .inventory-management-page .optimal {
+    color: #28a745;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .high {
+    color: #ff0000;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .normal {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .status {
+    padding: 0.3rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .status.safe {
+    background-color: #e6f4ea;
+    color: #28a745;
+  }
+  
+  .inventory-management-page .status.at-risk {
+    background-color: #ffe6e6;
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff0000;
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .inventory-management-page .pagination button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .temperature-monitoring {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .inventory-management-page .temperature-monitoring h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  @media (max-width: 1024px) {
+    .inventory-management-page .summary-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .inventory-management-page .summary-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .inventory-management-page .table-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .inventory-management-page .pagination {
+      justify-content: center;
+    }
+  
+    .inventory-management-page .header-actions {
+      gap: 0.5rem;
+    }
+  
+    .inventory-management-page .sync-data-btn {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .inventory-management-page .language-select {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .inventory-management-page .notification-btn {
+      padding: 0.5rem;
+    }
+  }*/
+
+
+
+.inventory-management-page {
+    position: relative;
+    background: #f5f7fb;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .inventory-management-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-management-page .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .inventory-management-page .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .inventory-management-page .nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .inventory-management-page .nav-link:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .inventory-management-page .nav-link.active {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .inventory-management-page .language-select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .inventory-management-page .sync-data-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    top: 1rem;
+    right: 14.5rem;
+  }
+  
+  .inventory-management-page .sync-data-btn:hover {
+    background: #e6f0ff;
+  }
+  
+  .inventory-management-page .sync-icon {
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .notification-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inventory-management-page .notification-icon {
+    font-size: 1.2rem;
+    color: #0b0b0b;
+  }
+  
+  .inventory-management-page .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .user-profile {
+    position: relative;
+  }
+  
+  .inventory-management-page .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+  }
+  
+  .inventory-management-page .main-content {
+    padding: 2rem;
+  }
+  
+  .inventory-management-page .main-content h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .inventory-management-page .main-content p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .inventory-management-page .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .inventory-management-page .card {
+    position: relative;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .inventory-management-page .card-icon {
+    font-size: 2rem;
+    color: #080808;
+    opacity: 0.8;
+  }
+  
+  .inventory-management-page .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .inventory-management-page .card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .card-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: #0e0d0d;
+  }
+  
+  .inventory-management-page .card-value.warning {
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .card-value.success {
+    color: #0ac141;
+  }
+  
+  .inventory-management-page .current-inventory {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .inventory-management-page .table-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inventory-management-page .table-header h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  .inventory-management-page .table-header p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .table-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .inventory-management-page .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    width: 200px;
+  }
+  
+  .inventory-management-page .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background: transparent;
+    width: 100%;
+  }
+  
+  .inventory-management-page .table-actions select {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .inventory-management-page .add-new-catch {
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .export-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inventory-management-page th,
+  .inventory-management-page td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .inventory-management-page th {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .product-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .inventory-management-page .product-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+  }
+  
+  .inventory-management-page .product-info div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inventory-management-page .product-info p {
+    margin: 0;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .inventory-management-page .product-info span {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .inventory-management-page .optimal {
+    color: #28a745;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .high {
+    color: #ff0000;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .normal {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .status {
+    padding: 0.3rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .inventory-management-page .status.safe {
+    background-color: #e6f4ea;
+    color: #28a745;
+  }
+  
+  .inventory-management-page .status.at-risk {
+    background-color: #ffe6e6;
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  
+  .inventory-management-page .action-btn.edit-btn {
+    color: #007bff;
+  }
+  
+  .inventory-management-page .action-btn:not(.edit-btn) {
+    color: #ff0000;
+  }
+  
+  .inventory-management-page .pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .inventory-management-page .pagination button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .inventory-management-page .temperature-monitoring {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .inventory-management-page .temperature-monitoring h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  .inventory-management-page .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .inventory-management-page .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .inventory-management-page .modal-content h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .inventory-management-page .modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inventory-management-page .modal-content label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .inventory-management-page .modal-content input,
+  .inventory-management-page .modal-content select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .inventory-management-page .modal-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .inventory-management-page .modal-actions button:first-child {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .inventory-management-page .modal-actions button:last-child {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+  @media (max-width: 1024px) {
+    .inventory-management-page .summary-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .inventory-management-page .summary-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .inventory-management-page .table-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .inventory-management-page .pagination {
+      justify-content: center;
+    }
+  
+    .inventory-management-page .header-actions {
+      gap: 0.5rem;
+    }
+  
+    .inventory-management-page .sync-data-btn {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .inventory-management-page .language-select {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .inventory-management-page .notification-btn {
+      padding: 0.5rem;
+    }
+  }
+
+
