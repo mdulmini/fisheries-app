@@ -27,6 +27,7 @@ import CheckoutPage from './pages/CheckoutPage';
 import HelpPage from './pages/HelpPage';
 import './styles/global.css';
 
+
 function App() {
   return (
     <Router>

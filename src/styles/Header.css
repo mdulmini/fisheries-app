@@ -6,7 +6,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1000;
   transition: background-color 0.3s ease;
@@ -14,41 +14,40 @@
 }
 
 .header.scrolled {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-#hero,#features,#about,#contact {
-  padding-top: 70px; 
 }
 
 .logo {
   width: 150px;
   height: auto;
-  border-radius: 8px; 
-  overflow: hidden; 
+  border-radius: 8px;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 
 .logo img {
-  width: 150px; 
+  width: 100%;
   height: auto;
   margin-left: -2.5rem;
+  display: block;
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  position: relative;
+  z-index: 1001;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  cursor: pointer;
+  display: block;
 }
 
 .nav-links a:hover {
@@ -62,7 +61,7 @@ html {
 }
 
 .language-selector {
-  padding: 0.5rem; 
+  padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
   font-size: 1rem;
@@ -72,7 +71,7 @@ html {
 
 .sign-in-btn {
   padding: 0.5rem 1rem;
-  background-color: #007bff; 
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -85,7 +84,7 @@ html {
   background-color: #007bff;
 }
 
-/*Animation*/ 
+/* Animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -99,5 +98,5 @@ html {
 
 .nav-links a.active {
   color: #007bff;
-  border-bottom: 2px solid #007bff; 
+  border-bottom: 2px solid #007bff;
 }
