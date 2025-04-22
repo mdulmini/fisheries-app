@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaArrowLeft, FaPaperPlane } from 'react-icons/fa';
 import styles from '../styles/ChatPage.module.css';
+import logo from '../assets/logo.png';
 
 const ChatPage = () => {
   const location = useLocation();
@@ -25,7 +26,7 @@ const ChatPage = () => {
   return (
     <div className={styles.chatPage}>
       <header className={styles.header}>
-        <div className={styles.logo}>LOGO</div>
+        <div className={styles.logo}><img src={logo} alt="Fisheries Logo" /></div>
         <Link to="/buyers" className={styles.backLink}>
           <FaArrowLeft /> Back to Buyers
         </Link>

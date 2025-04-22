@@ -12,7 +12,7 @@ const SignUpPage = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     console.log('Sending OTP to:', phoneNumber);
-    navigate('/verify-otp', { state: { phoneNumber } });
+    navigate('/verify-otp', { state: { phoneNumber, role } }); 
   };
 
   const handleLoginRedirect = () => {
@@ -36,12 +36,6 @@ const SignUpPage = () => {
               onClick={() => setRole('Buyer')}
             >
               Buyer
-            </button>
-            <button
-              className={role === 'Admin' ? 'active' : ''}
-              onClick={() => setRole('Admin')}
-            >
-              Admin
             </button>
           </div>
           
@@ -98,3 +92,6 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
+
+
+

@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
 import styles from '../styles/MatchConfirmationPage.module.css';
+import logo from '../assets/logo.png';
+
 
 const MatchConfirmationPage = () => {
   const location = useLocation();
@@ -17,7 +19,7 @@ const MatchConfirmationPage = () => {
   return (
     <div className={styles.matchConfirmationPage}>
       <header className={styles.header}>
-        <div className={styles.logo}>LOGO</div>
+        <div className={styles.logo}><img src={logo} alt="Fisheries Logo" /></div>
         <Link to="/buyers" className={styles.backLink}>
           <FaArrowLeft /> Back to Buyers
         </Link>

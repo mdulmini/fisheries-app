@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaSearch, FaBell, FaSyncAlt, FaMapMarkerAlt, FaCheck, FaComment } from 'react-icons/fa';
 import styles from '../styles/BuyerSellerMatchingPage.module.css';
+import logo from '../assets/logo.png';
 
 const BuyerSellerMatchingPage = () => {
   const navigate = useNavigate();
@@ -164,7 +165,7 @@ const BuyerSellerMatchingPage = () => {
   return (
     <div className={styles.buyerSellerMatchPage}>
       <header className={styles.header}>
-        <div className={styles.logo}>LOGO</div>
+        <div className={styles.logo}><img src={logo} alt="Fisheries Logo" /></div>
         <Link to="/dashboard" className={styles.backLink}>
           <FaArrowLeft /> Back to Dashboard
         </Link>
@@ -279,6 +280,8 @@ const BuyerSellerMatchingPage = () => {
                   <option>All Types</option>
                   <option>Crabs</option>
                   <option>Tuna</option>
+                  <option>Swordfish</option>
+                  <option>Prawns</option>
                 </select>
               </div>
               <div className={styles.filterGroup}>

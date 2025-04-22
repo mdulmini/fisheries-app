@@ -1,0 +1,331 @@
+  .buyerHomePage {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 250px;
+    height: auto;
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+
+  .logo img {
+    width: 50px; 
+    height: auto;
+  }
+
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .navLinks button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .navLinks button:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .cartBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.7rem 1.5rem; 
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem; 
+  }
+  
+  
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: url('src/assets/fishing-net.jpg') no-repeat center center/cover;
+    color: #0e0d0d;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .shopNowBtn {
+    padding: 0.7rem 1.5rem; 
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 9rem;
+    margin-left: 38rem;
+  }
+  
+  .shopNowBtn:hover {
+    background: #333;
+  }
+  
+ 
+  .specialOffer {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #000;
+    color: #fff;
+    margin: 2rem 0;
+    border-radius: 8px;
+  }
+  
+  .specialOffer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .specialOffer p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .viewDetailsBtn {
+    padding: 0.8rem 2rem;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .viewDetailsBtn:hover {
+    background: #f0f0f0;
+  }
+  
+  
+  .ourProducts {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .ourProducts h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .productsGrid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: transform 0.5s ease;
+  }
+  
+  .productCard {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 250px; 
+    position: relative;
+    padding: 0; 
+  }
+  
+  .imageWrapper {
+    width: 100%;
+    height: 80%; 
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; 
+  }
+  
+  .productCard h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 0.5rem 0;
+  }
+  
+  .arrowBtn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .arrowBtn:first-child {
+    left: -40px;
+  }
+  
+  .arrowBtn:last-child {
+    right: -40px;
+  }
+  
+  .arrowBtn:hover {
+    color: #007bff;
+  }
+  
+  .carouselDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+  }
+  
+  .activeDot {
+    background: #000;
+  }
+  
+  .moreProductsBtn {
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .moreProductsBtn:hover {
+    background: #f0f0f0;
+  }
+  
+ 
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #dfdede;
+    border-top: 1px solid #ddd;
+    flex-wrap: wrap;
+    gap: 2rem; 
+  }
+  
+  .footerSection {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footerSection h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footerSection p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .footerSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerSection ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footerSection ul li button {
+    background: none;
+    border: none;
+    color: #666; 
+    cursor: pointer;
+    font-size: 0.9rem; 
+  }
+  
+  .footerSection ul li button:hover {
+    text-decoration: underline;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .socialIcons {
+    color: #ccc;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .socialIcons:hover {
+    color: #fff;
+  }
+  
+  .socialIcons {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+  }

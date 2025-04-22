@@ -1,53 +1,14 @@
-/*import React from 'react';
-import '../styles/Sidebar.css';
-
-const Sidebar = () => {
-  return (
-    <div className="sidebar">
-      <div className="sidebar-logo">LOGO</div>
-      <nav className="sidebar-nav">
-        <a href="/dashboard" className="sidebar-link active">
-          <span className="icon">📊</span> Dashboard
-        </a>
-        <a href="/inventory" className="sidebar-link">
-          <span className="icon">🐟</span> Inventory
-        </a>
-        <a href="/market-prices" className="sidebar-link">
-          <span className="icon">💰</span> Market Prices
-        </a>
-        <a href="/buyers" className="sidebar-link">
-          <span className="icon">👥</span> Buyers
-        </a>
-        <a href="/orders" className="sidebar-link">
-          <span className="icon">📦</span> Orders
-        </a>
-        <a href="/analytics" className="sidebar-link">
-          <span className="icon">📈</span> Analytics
-        </a>
-        <a href="/compliance" className="sidebar-link">
-          <span className="icon">📋</span> Compliance
-        </a>
-        <a href="/settings" className="sidebar-link">
-          <span className="icon">⚙️</span> Settings
-        </a>
-      </nav>
-    </div>
-  );
-};
-
-export default Sidebar;*/
-
-
 import React from 'react';
 import { NavLink } from 'react-router-dom'; 
-import { FaChartBar, FaFish, FaDollarSign, FaUsers, FaBox, FaChartLine, FaFileAlt, FaCog } from 'react-icons/fa'; // Importing icons
+import { FaChartBar, FaFish, FaDollarSign, FaUsers, FaBox, FaChartLine, FaFileAlt, FaCog, FaQuestionCircle } from 'react-icons/fa'; 
 import '../styles/Sidebar.css';
+import logo from '../assets/logo.png';
 
 const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="sidebar-logo">LOGO</div>
+      <div className="sidebar-logo"><img src={logo} alt="Fisheries Logo" /></div>
       <nav className="sidebar-nav">
         <NavLink
           to="/dashboard"
@@ -97,6 +58,13 @@ const Sidebar = () => {
         >
           <FaCog className="sidebar-icon" /> Settings
         </NavLink>
+        <NavLink
+          to="/help"
+          className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+        >
+          <FaQuestionCircle className="sidebar-icon" /> Help
+        </NavLink>
+        
       </nav>
     </div>
   );

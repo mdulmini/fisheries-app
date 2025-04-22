@@ -1,0 +1,366 @@
+  .help-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #EFF4FF 0%, #EFF4FF 100%); 
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    position: relative;
+    overflow: hidden;
+  }
+    
+  .help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .help-logo {
+    width: 250px;
+    height: auto;
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+  
+  .help-logo img {
+    width: 50px; 
+    height: auto;
+  }
+
+  .help-header-right {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1; 
+  }
+  
+  .help-synced-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  
+  .help-synced-btn:hover {
+    background: #e6f0ff;
+  }
+  
+  .help-container {
+    display: flex;
+    flex: 1;
+    z-index: 1;
+  }
+  
+  .help-sidebar {
+    width: 200px;
+    background: linear-gradient(180deg, #b7d0f3 0%, #b7d0f3 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .help-sidebar-btn {
+    background: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #000;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .help-sidebar-btn-active {
+    background: #e9ecf0;
+    color: #000;
+  }
+  
+  .help-sidebar-btn:hover {
+    background: #e9ecf0;
+    color: #000;
+  }
+  
+  .help-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .help-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .help-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .help-section p {
+    font-size: 1rem;
+    color: #080909;
+    margin-bottom: 1rem;
+  }
+  
+  .help-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .help-tips-card,
+  .help-faq-card,
+  .help-contact-card {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .help-tips-card:hover,
+  .help-faq-card:hover,
+  .help-contact-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .help-tips {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .help-tip-item {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    transition: background 0.3s ease;
+  }
+  
+  .help-tip-item:hover {
+    background: #EFF4FF;
+  }
+  
+  .help-tip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .help-tip-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .help-tip-icon {
+    font-size: 1.5rem;
+    color: #040404;
+  }
+  
+  .help-tip-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .help-tip-description {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .help-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .help-faq-item {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .help-faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .help-faq-header h4 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .help-faq-answer {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .help-contact {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .help-contact-form,
+  .help-contact-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .help-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .help-form-group label {
+    font-size: 1rem;
+    color: #34495e;
+  }
+  
+  .help-form-group input,
+  .help-form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2c3e50;
+  }
+  
+  .help-form-group textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .help-save-btn {
+    padding: 0.7rem 1.5rem;
+    background: #2f7df1;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .help-save-btn:hover {
+    background: #3f74c9;
+  }
+  
+  .help-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .help-contact-icon {
+    font-size: 1.2rem;
+    color: #090909;
+  }
+  
+  .help-contact-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: #2c3e50;
+  }
+  
+  .help-contact-item p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .help-success-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #c4d2f1;
+    color: #0d0e0d;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 768px) {
+    .help-container {
+      flex-direction: column;
+    }
+  
+    .help-sidebar {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .help-sidebar-btn {
+      flex: 1;
+      text-align: center;
+    }
+  
+    .help-contact {
+      flex-direction: column;
+    }
+  }
+  
+  .help-page .help-dashboard-btn {
+    background: transparent; 
+    color: #060606;
+    border: none; 
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .help-page .help-dashboard-btn:active,
+  .help-page .help-dashboard-btn:hover {
+    color: #0c0c0c; 
+    border-bottom: 2px solid #0c0c0c; 
+  }

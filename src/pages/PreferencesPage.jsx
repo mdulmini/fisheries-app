@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaSave } from 'react-icons/fa';
 import styles from '../styles/PreferencesPage.module.css';
+import logo from '../assets/logo.png';
 
 const PreferencesPage = () => {
   const [preferences, setPreferences] = useState({
@@ -26,7 +27,7 @@ const PreferencesPage = () => {
   return (
     <div className={styles.preferencesPage}>
       <header className={styles.header}>
-        <div className={styles.logo}>LOGO</div>
+        <div className={styles.logo}><img src={logo} alt="Fisheries Logo" /></div>
         <Link to="/buyers" className={styles.backLink}>
           <FaArrowLeft /> Back to Buyers
         </Link>

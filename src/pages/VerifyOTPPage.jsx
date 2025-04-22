@@ -5,7 +5,7 @@ import '../styles/VerifyOTPPage.css';
 const VerifyOTPPage = () => {
   const [otp, setOtp] = useState(['', '', '', '']);
   const { state } = useLocation();
-  const { phoneNumber } = state || {};
+  const { phoneNumber, role } = state || {};
   const navigate = useNavigate();
 
   const handleOtpChange = (index, value) => {
@@ -14,7 +14,6 @@ const VerifyOTPPage = () => {
       newOtp[index] = value;
       setOtp(newOtp);
 
-      
       if (value && index < 3) {
         document.getElementById(`otp-${index + 1}`).focus();
       }
@@ -26,14 +25,13 @@ const VerifyOTPPage = () => {
     const enteredOtp = otp.join('');
     
     if (enteredOtp === '9876') {
-      navigate('/verify-success');
+      navigate('/verify-success', { state: { role } }); 
     } else {
       alert('Invalid OTP');
     }
   };
 
   const handleResend = () => {
-  
     console.log('Resending OTP to:', phoneNumber);
   };
 

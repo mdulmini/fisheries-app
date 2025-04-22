@@ -1,0 +1,338 @@
+.salesAnalyticsPage {
+    background: #f5f7fb;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 250px;
+    height: auto;
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+  
+  .logo img {
+    width: 50px; 
+    height: auto;    
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .navLink:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .headerActions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .timeRangeSelect {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .exportBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .exportBtn:hover {
+    background-color: #333;
+  }
+  
+  .exportIcon {
+    font-size: 1rem;
+  }
+  
+  .mainContent {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .statCard {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .statIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f7fb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #040404;
+  }
+  
+  .statDetails h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statValue {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.25rem;
+  }
+  
+  .statChange {
+    font-size: 0.9rem;
+    color: #28a745;
+  }
+  
+  .statChange[data-negative='true'] {
+    color: #dc3545;
+  }
+  
+  .statChange::before {
+    content: '↑';
+    margin-right: 0.25rem;
+  }
+  
+  .statChange[data-negative='true']::before {
+    content: '↓';
+  }
+  
+  .charts {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .salesTrend,
+  .productDistribution {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .salesTrendHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .salesTrend h2,
+  .productDistribution h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .timeTabs {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .tab {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .tab.active {
+    background-color: #000;
+    color: #fff;
+    border: none;
+  }
+  
+  .tab:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .tab.active:hover {
+    background-color: #333;
+  }
+  
+  .chartPlaceholder {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .legendColor {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+  }
+  
+  .insights {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .insights h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .insightCard {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .insightCard:last-child {
+    border-bottom: none;
+  }
+  
+  .insightIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .insightIcon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .insightCard:nth-child(1) .insightIcon {
+    background-color: #fff;
+  }
+  
+  .insightCard:nth-child(2) .insightIcon {
+    background-color: #fff;
+  }
+  
+  .insightCard:nth-child(3) .insightIcon {
+    background-color: #fff;
+  }
+  
+  .insightDetails h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.25rem;
+  }
+  
+  .insightDetails p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: 1024px) {
+    .charts {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: column;
+    }
+  
+    .header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .headerActions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .salesTrendHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }

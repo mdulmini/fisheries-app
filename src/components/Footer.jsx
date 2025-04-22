@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Footer.css';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   const [activeLink, setActiveLink] = useState(''); 
@@ -26,7 +27,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <div className="logo">LOGO</div>
+          <div className="logo"><img src={logo} alt="Fisheries Logo" /></div>
           <p>Empowering Sri Lankan fishing communities with technology.</p>
         </div>
         <div className="footer-section">

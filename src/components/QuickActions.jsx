@@ -1,27 +1,3 @@
-/*import React from 'react';
-import { FaPlus, FaSearch, FaChartLine } from 'react-icons/fa'; 
-import '../styles/QuickActions.css';
-
-const QuickActions = () => {
-  return (
-    <div className="quick-actions">
-      <h2>Quick Actions</h2>
-      <button className="action-button primary">
-        <FaPlus className="action-icon" /> Add New Stock
-      </button>
-      <button className="action-button">
-        <FaSearch className="action-icon" /> Find Buyers
-      </button>
-      <button className="action-button">
-        <FaChartLine className="action-icon" /> View Market Prices
-      </button>
-    </div>
-  );
-};
-
-export default QuickActions;*/
-
-
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaPlus, FaSearch, FaChartLine } from 'react-icons/fa';
@@ -60,5 +36,3 @@ const QuickActions = () => {
 };
 
 export default QuickActions;
-
-

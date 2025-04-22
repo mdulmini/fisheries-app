@@ -34,11 +34,23 @@
   min-width: 200px;
 }
 
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
 .footer-section .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #fff;
+  width: 150px;
+  height: auto;
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+
+.footer-section .logo img {
+  width: 150px; 
+  height: auto;
+  margin-top: -3rem;
 }
 
 .footer-section h4 {

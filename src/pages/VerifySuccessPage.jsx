@@ -1,17 +1,25 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/VerifySuccessPage.css';
 
 const VerifySuccessPage = () => {
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const { role } = state || {};
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/dashboard');
+      Snippets: if (role === 'Buyer') {
+        navigate('/buyer-home'); 
+      } else if (role === 'Fisher') {
+        navigate('/dashboard'); 
+      } else {
+        navigate('/'); 
+      }
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, [navigate, role]);
 
   return (
     <div className="verify-success-page">

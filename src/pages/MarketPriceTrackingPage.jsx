@@ -4,6 +4,7 @@ import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, Legend } from 'chart.js';
 import { FaSync, FaBell, FaTrash } from 'react-icons/fa';
 import '../styles/MarketPriceTrackingPage.css';
+import logo from '../assets/logo.png';
 
 
 ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip, Legend);
@@ -14,7 +15,6 @@ const MarketPriceTrackingPage = () => {
   const [fishType, setFishType] = useState('Tuna');
   const [targetPrice, setTargetPrice] = useState('');
   const [smsAlert, setSmsAlert] = useState(false);
-  const [emailAlert, setEmailAlert] = useState(false);
   const [alerts, setAlerts] = useState([
     { fishType: 'Tuna', price: '1000' },
     { fishType: 'Swordfish', price: '900' },
@@ -152,7 +152,6 @@ const MarketPriceTrackingPage = () => {
       setAlerts([...alerts, { fishType, price: targetPrice }]);
       setTargetPrice('');
       setSmsAlert(false);
-      setEmailAlert(false);
       alert('Price alert set successfully!');
     } else {
       alert('Please enter a target price!');
@@ -166,7 +165,7 @@ const MarketPriceTrackingPage = () => {
   return (
     <div className="market-price-tracking-page">
       <header className="header">
-        <div className="logo">LOGO</div>
+        <div className="logo"><img src={logo} alt="Fisheries Logo" /></div>
         <nav className="nav">
           <Link to="/dashboard" className="nav-link">Dashboard</Link>
           <Link to="/reports" className="nav-link">Reports</Link>
@@ -233,7 +232,7 @@ const MarketPriceTrackingPage = () => {
               </select>
             </label>
             <label>
-              Target Price ($/kg)
+              Target Price (LKR/kg)
               <input
                 type="number"
                 value={targetPrice}
@@ -264,7 +263,7 @@ const MarketPriceTrackingPage = () => {
             {alerts.map((alert, index) => (
               <div key={index} className="alert-item">
                 <p>
-                  {alert.fishType} Alert at ${alert.price}/kg
+                  {alert.fishType} Alert at LKR {alert.price}/kg
                 </p>
                 <button onClick={() => handleDeleteAlert(index)}>
                   <FaTrash />
@@ -280,7 +279,7 @@ const MarketPriceTrackingPage = () => {
             {liveMarketUpdates.map((update, index) => (
               <div key={index} className="update-card">
                 <p>{update.fishType}</p>
-                <p className="price">${update.price}/kg</p>
+                <p className="price">LKR {update.price}/kg</p>
                 <p className={update.change.startsWith('+') ? 'positive' : 'negative'}>
                   {update.change}
                 </p>
