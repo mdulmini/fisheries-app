@@ -72,7 +72,7 @@ const OrderManagementPage = () => {
     const newOrderData = {
       id: `#ORD-2024-${Math.floor(Math.random() * 10000)}`,
       customer: newOrder.customer,
-      items: `${newOrder.items} - $${newOrder.price}`,
+      items: `${newOrder.items} - LKR${newOrder.price}`,
       status: 'Processing',
       eta: 'Created just now',
     };

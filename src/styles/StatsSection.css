@@ -1,7 +1,7 @@
 .stats {
   display: flex;
   flex-direction: column; 
-  padding: 4rem 2rem;
+  padding: 6rem 4rem;
   background-color:#EFF4FF;
   align-items: center; 
   gap: 2rem; 
@@ -11,7 +11,7 @@
 
 .stats h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem; 
+  margin-bottom: 0.5rem; 
   text-align: center; 
   width: 100%; 
 }
@@ -25,7 +25,7 @@
 
 .stats-map {
   flex: 1; 
-  max-width: 750px; 
+  max-width: 800px; 
 }
 
 .stats-map img {
