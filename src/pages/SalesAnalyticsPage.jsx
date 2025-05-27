@@ -118,7 +118,7 @@ const SalesAnalyticsPage = () => {
         <div className={styles.logo}><img src={logo} alt="Fisheries Logo" /></div>
         <nav className={styles.nav}>
           <Link to="/dashboard" className={styles.navLink}>Dashboard</Link>
-          <Link to="/sales-reports" className={styles.navLink}>Report</Link> {/* Updated path */}
+          <Link to="/sales-reports" className={styles.navLink}>Report</Link> 
           <Link to="/analytics" className={styles.navLink}>Analytics</Link>
         </nav>
         <div className={styles.headerActions}>
@@ -278,3 +278,7 @@ const SalesAnalyticsPage = () => {
 };
 
 export default SalesAnalyticsPage;
+
+
+
+

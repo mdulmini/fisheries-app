@@ -308,6 +308,7 @@
     font-size: 0.9rem;
     color: #666;
   }
+
   
   @media (max-width: 1024px) {
     .charts {

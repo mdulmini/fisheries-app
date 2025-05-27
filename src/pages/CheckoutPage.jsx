@@ -8,7 +8,6 @@ const CheckoutPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { cartItems = [], quantities = {}, total = 0 } = location.state || {};
-
   const [showCreditCardForm, setShowCreditCardForm] = useState(false);
   const [showOrderSuccessPopup, setShowOrderSuccessPopup] = useState(false);
   const [showSuccessNotification, setShowSuccessNotification] = useState(false);
@@ -244,7 +243,7 @@ const CheckoutPage = () => {
       return;
     }
 
-    const order = {
+    /*const order = {
       id: Date.now(),
       items: cartItems.map(item => ({
         name: item.name,
@@ -253,7 +252,20 @@ const CheckoutPage = () => {
       })),
       total: `LKR ${total.toFixed(2)}`,
       orderDate: new Date().toLocaleString(),
+    };*/
+
+    const order = {
+      id: Date.now(),
+      items: cartItems.map(item => ({
+        name: item.name,
+        quantity: quantities[item._id] || 1, 
+        price: `LKR ${(parseFloat(item.price) * (quantities[item._id] || 1)).toFixed(2)}`,
+      })),
+      total: `LKR ${total.toFixed(2)}`,
+      orderDate: new Date().toLocaleString(),
     };
+
+   
 
     const existingOrders = JSON.parse(localStorage.getItem('customerOrders')) || [];
     existingOrders.push(order);
@@ -261,6 +273,7 @@ const CheckoutPage = () => {
 
     setShowOrderSuccessPopup(true);
   };
+ 
 
   const handlePopupClose = () => {
     setShowOrderSuccessPopup(false);
@@ -487,11 +500,17 @@ const CheckoutPage = () => {
                 <p>No items in cart.</p>
               ) : (
                 cartItems.map((item) => (
-                  <div key={item.id} className={styles.cartItem}>
+                 /* <div key={item.id} className={styles.cartItem}>
                     <span>{item.name}</span>
                     <span className={styles.quantity}>Quantity: {quantities[item.id]}</span>
                     <span>LKR {(parseFloat(item.price) * quantities[item.id]).toFixed(2)}</span>
+                  </div>*/
+                  <div key={item.id} className={styles.cartItem}>
+                    <span>{item.name}</span>
+                    <span className={styles.quantity}>Quantity: {quantities[item._id] || 1}</span>
+                    <span>LKR {(parseFloat(item.price) * (quantities[item._id] || 1)).toFixed(2)}</span>
                   </div>
+
                 ))
               )}
               <div className={styles.total}>
