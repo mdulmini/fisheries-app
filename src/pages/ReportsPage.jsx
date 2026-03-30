@@ -6,8 +6,6 @@ import autoTable from 'jspdf-autotable';
 import '../styles/ReportsPage.css';
 import logo from '../assets/logo.png';
 
-import seaPic from '../assets/sea_pic.jpg';
-import loginPic from '../assets/login_pic.jpg';
 
 
 const ReportsPage = () => {
@@ -82,9 +80,6 @@ const ReportsPage = () => {
           </button>
           <div className="user-profile">
             <img src="src/assets/ravi.jpg" alt="User" />
-
-            <img src={seaPic} alt="Sea" />
-            <img src={loginPic} alt="Login" />
             
           </div>
         </div>
